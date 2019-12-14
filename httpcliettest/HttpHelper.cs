@@ -30,7 +30,7 @@ namespace httpcliettest
         /// <summary>
         /// 线程通知器，线程执行结果通知到其它线程，异步执行
         /// </summary>
-        public static ManualResetEvent allDone = new ManualResetEvent(false);
+        public ManualResetEvent allDone = new ManualResetEvent(false);
         /// <summary>
         /// 初始化需要提供你的方法委托
         /// </summary>
@@ -55,7 +55,7 @@ namespace httpcliettest
             stopwatch.Stop();
             Console.WriteLine("get执行时间：" + stopwatch.ElapsedMilliseconds + "毫秒");
         }
-        private static void ReadCallback(IAsyncResult asynchronousResult)
+        private void ReadCallback(IAsyncResult asynchronousResult)
         {
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -94,7 +94,7 @@ namespace httpcliettest
             //异步组织数据
             request.BeginGetRequestStream(new AsyncCallback(ReadCallback), myRequestState);
             allDone.WaitOne();
-           
+
 
             stopwatch = new Stopwatch();
             stopwatch.Start();
@@ -103,7 +103,7 @@ namespace httpcliettest
             stopwatch.Stop();
             Console.WriteLine("post执行响应后时间：" + stopwatch.ElapsedMilliseconds + "毫秒" + DateTime.Now);
         }
-        
+
 
         /// <summary>
         /// 异步GET请求
