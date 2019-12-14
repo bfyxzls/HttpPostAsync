@@ -10,8 +10,8 @@ namespace WebApplication1.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            Thread.Sleep(30000);//耗时1分钟
-
+            httpcliettest.HttpHelper httpHelper = new httpcliettest.HttpHelper();
+            httpHelper.Post("http://localhost:54417/api/values", "name=ok");
             return new string[] { "value1", "value2" };
         }
 
