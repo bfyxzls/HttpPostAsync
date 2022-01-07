@@ -12,8 +12,8 @@ namespace Fuck.Core.Config
         {
             if (keyValues == null || isChanged)
             {
-                keyValues = SerializationHelper.DeserializeFromJson<List<KeyValue>>(configFilePath);
-            }
+            keyValues = SerializationHelper.DeserializeFromJson<List<KeyValue>>(configFilePath);
+        }
         }
 
         public override KeyValue Get(string key)
