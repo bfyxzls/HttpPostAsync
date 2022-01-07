@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "httpcliettest", "httpcliettest\httpcliettest.csproj", "{67861766-0D70-4F93-A348-AD32879BB1B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fuck.Core", "httpcliettest\Fuck.Core.csproj", "{67861766-0D70-4F93-A348-AD32879BB1B4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{0067FA0D-E4DA-499A-BA74-72041F270A95}"
 EndProject
