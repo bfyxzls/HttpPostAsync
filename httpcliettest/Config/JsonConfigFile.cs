@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Fuck.Core.Config
 {
@@ -10,15 +6,11 @@ namespace Fuck.Core.Config
     {
         public JsonConfigFile(string file) : base(file)
         {
-            if (keyValues == null || isChanged)
+            if (!keyValues.ContainsKey(file) || isChanged)
             {
-            keyValues = SerializationHelper.DeserializeFromJson<List<KeyValue>>(configFilePath);
-        }
+                keyValues.TryAdd(file, SerializationHelper.DeserializeFromJson<List<KeyValue>>(configFilePath));
+            }
         }
 
-        public override KeyValue Get(string key)
-        {
-            return keyValues.Where(i => i.key.Equals(key)).FirstOrDefault();
-        }
     }
 }

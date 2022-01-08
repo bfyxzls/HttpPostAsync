@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Fuck.Core.Config
 {
+    /// <summary>
+    /// 配置属性
+    /// </summary>
     public class KeyValue
     {
         public string key { get; set; }
